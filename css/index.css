@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(96, 96, 96);
+    border: 3px solid black;
+}
+
+article {
+    background-color: rgb(96, 96, 96);
+}
+
+.menuIcon {
+    border: 2px solid black ;
+}
+
+.menuIcon:active {
+    color: white;
+    background-color: black;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#menuCheckbox {
+    display: none;
+}
+
+#navbarNav {
+    display: none;
+    list-style: none;
+    padding: 0;
+    border: 2px solid black;
+}
+
+#navbarNav > li {
+    text-align: center;
+    border: 1px solid black;
+}
+
+#menuCheckbox:checked + #navbarNav {
+    display: block;
+}
+
+#menuCheckbox::not(:checked) + #navbarNav {
+    display: none;
+}
+
+@media (min-width: 575px) {
+
+    #menuCheckbox:checked + #navbarNav {
+        display: none;
+    }
+}
